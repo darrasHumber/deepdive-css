@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --PRIMARY-COLOR: #6c5ce7;
+  --SECONDARY-COLOR: #00b894;
+  --BACKGROUND-COLOR: #f8f9fa;
+  --TEXT-COLOR: #2d3436;
+  --ACCENT-COLOR: #ff7675;
+  --FONT-SIZE-LARGE: 2rem;
+  --FONT-SIZE-MEDIUM: 1.5rem;
+  --FONT-SIZE-SMALL: 1rem;
+  --PADDING: 1.5rem;
+  --GAP: 1.5rem;
+  --BORDER-RADIUS: 12px;
+  --BOX-SHADOW: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--TEXT-COLOR);
+  line-height: 1.6;
+  background-color: var(--BACKGROUND-COLOR);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+/*Task 1, Header and Footer*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--PRIMARY-COLOR);
+  color: white;
+  text-align: center;
+  padding: var(--PADDING);
+  z-index: 1000;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.footer {
+  background-color: var(--PRIMARY-COLOR);
+  color: white;
+  text-align: center;
+  padding: var(--PADDING);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Task 2*: Intro Section*/
+.intro {
+  text-align: center;
+  padding: var(--PADDING);
+  margin-top: 80px;
+  background-color: white;
+  border-radius: var(--BORDER-RADIUS);
+  margin: 100px auto 0;
+  max-width: 800px;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.intro h2 {
+  font-size: var(--FONT-SIZE-LARGE);
+  color: var(--PRIMARY-COLOR);
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: var(--FONT-SIZE-SMALL);
+  color: var(--TEXT-COLOR);
+}
+/*Task 3: Flexbox Section*/
+.flexbox-section {
+  padding: var(--PADDING);
+  background-color: white;
+  margin: var(--GAP) auto;
+  max-width: 1200px;
+  border-radius: var(--BORDER-RADIUS);
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.flexbox-section h2 {
+  font-size: var(--FONT-SIZE-LARGE);
+  color: var(--PRIMARY-COLOR);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--GAP);
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  background-color: var(--SECONDARY-COLOR);
+  padding: var(--PADDING);
+  border-radius: var(--BORDER-RADIUS);
+  text-align: center;
+  flex: 1 1 calc(33.333% - 2 * var(--GAP));
+  box-shadow: var(--BOX-SHADOW);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flex-item h3 {
+  font-size: var(--FONT-SIZE-MEDIUM);
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.flex-item p {
+  font-size: var(--FONT-SIZE-SMALL);
+  color: var(--TEXT-COLOR);
+}
+/*Task 4: Grid Section*/
+.grid-section {
+  padding: var(--PADDING);
+  background-color: white;
+  margin: var(--GAP) auto;
+  max-width: 1200px;
+  border-radius: var(--BORDER-RADIUS);
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.grid-section h2 {
+  font-size: var(--FONT-SIZE-LARGE);
+  color: var(--PRIMARY-COLOR);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--GAP);
+}
+
+.grid-item {
+  background-color: var(--PRIMARY-COLOR);
+  padding: var(--PADDING);
+  border-radius: var(--BORDER-RADIUS);
+  text-align: center;
+  color: white;
+  font-size: var(--FONT-SIZE-SMALL);
+  box-shadow: var(--BOX-SHADOW);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* Task 5: Positioning Section*/
+.positioning-section {
+  padding: var(--PADDING);
+  background-color: white;
+  margin: var(--GAP) auto;
+  max-width: 1200px;
+  border-radius: var(--BORDER-RADIUS);
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.relative-container {
+  position: relative;
+  background-color: var(--SECONDARY-COLOR);
+  padding: var(--PADDING);
+  border-radius: var(--BORDER-RADIUS);
+  color: white;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--ACCENT-COLOR);
+  padding: var(--PADDING);
+  border-radius: var(--BORDER-RADIUS);
+  color: white;
+  box-shadow: var(--BOX-SHADOW);
+}
